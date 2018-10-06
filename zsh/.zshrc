@@ -47,6 +47,9 @@ done
 # import as a function
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+# Disable fastlane update prompts
+export FASTLANE_SKIP_UPDATE_CHECK=true
+
 # Yes, these are a pain to customize. Fortunately, Geoff Greer made an online
 # tool that makes it easy to customize your color scheme and keep them in sync
 # across Linux and OS X/*BSD at http://geoff.greer.fm/lscolors/

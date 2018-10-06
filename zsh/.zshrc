@@ -34,16 +34,18 @@ for path_candidate in /opt/local/sbin \
   /Applications/Xcode.app/Contents/Developer/usr/bin \
   /opt/local/bin \
   /usr/local/share/npm/bin \
-  ~/.cabal/bin \
-  ~/.cargo/bin \
   ~/.rbenv/bin \
   ~/bin \
-  ~/src/gocode/bin
+  ~/Library/Android/sdk/platform-tools \
+  ~/.fastlane/bin
 do
   if [ -d ${path_candidate} ]; then
     export PATH=${PATH}:${path_candidate}
   fi
 done
+
+# import as a function
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Yes, these are a pain to customize. Fortunately, Geoff Greer made an online
 # tool that makes it easy to customize your color scheme and keep them in sync

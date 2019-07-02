@@ -136,6 +136,10 @@ bindkey -M isearch " " magic-space # normal space during searches
 
 # Customize to your needs...
 # Stuff that works on bash or zsh
+if [ -r ~/.bash_profile ]; then
+  source ~/.bash_profile
+fi
+
 if [ -r ~/.sh_aliases ]; then
   source ~/.sh_aliases
 fi
